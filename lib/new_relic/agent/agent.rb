@@ -976,7 +976,7 @@ module NewRelic
             log.debug "Sending (#{@traces.length}) transaction traces"
 
             begin
-              options = { :keep_backtraces => true }
+              options = { keep_backtraces: true }
               if !(NewRelic::Agent::Database.record_sql_method == :off)
                 options[:record_sql] = NewRelic::Agent::Database.record_sql_method
               end
